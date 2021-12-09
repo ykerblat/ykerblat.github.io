@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+@font-face {
+    font-family: 'high_jakartaregular';
+    src: url('highjakarta-webfont.woff2') format('woff2'),
+         url('highjakarta-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'boxingregular';
+    src: url('boxing-webfont.woff2') format('woff2'),
+         url('boxing-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'medio_vintage_roughregular';
+    src: url('medio_vintage_rough-webfont.woff2') format('woff2'),
+         url('medio_vintage_rough-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'komika_axisregular';
+    src: url('komikax_-webfont.woff2') format('woff2'),
+         url('komikax_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.snapshot{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:25px;
+}
+
+.formative-years {
+  display: flex;
+}
+
+.column-CH1 {
+  flex: 50%;
+  padding: 5px;
+}
+
+.secondDecade {
+  display:flex;
+  flex-direction:column;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.column-CH2 img{
+  flex: 50%;
+  padding: 5px;
+}
+
+blockquote {
+    margin-top:40px;    
+    margin-bottom:20px;
+    /*margin: 0;*/
+}
+
+blockquote p {
+    margin-top:40px;
+    padding: 15px;
+    font-size:16px;
+    font-family:'komika_axisregular';
+    background: #eee;
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+
+.big-container{
+  display:flex;
+  flex-direction:row;
+  position:relative;
+}
+
+.flex-container-1 {
+  /*width: 24px;*/
+  height: 24px;
+}
+
+.intro{
+  text-align: center;
+  margin:auto;
+}
+
+.hero1 {
+  padding-top: 2vh;
+  background-image: url("https://ids.si.edu/ids/deliveryService?max=800&id=NMAAHC-2016_164_22_2_001");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #C6962F;
+  min-height: 800px; 
+  /*font-size:52px;*/
+  /*line-height:30px;*/
+  height: 100vh;
+  position:relative;
+  z-index: 8;
+  /*height: 100%;*/
+}
+
+.intro h2 {
+  font-family:'high_jakartaregular';
+  margin: auto;
+  padding: 100px 0 100px;
+  font-size:100px;
+  font-weight:bold;
+}
+
+.intro p {
+  font-family: 'boxingregular';
+  /*font-family:'roboto';*/
+  margin: auto;
+  /*color:#C64B2F;*/
+  color:white;
+  font-size:36px;
+}
+.chevron {
+  /*position: absolute;*/
+  margin: auto;
+  align-items: center;
+  width: 28px;
+  height: 12px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: grey;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  /*margin-right: -30px;*/
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+  color: grey;
+  text-transform: uppercase;
+  /*white-space: nowrap;*/
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+section {
+  height: 25vh;
+}
+
+.filler p{
+  /*height: 5rem;*/
+  text-align: center;
+  /*font-family:'courier';*/
+  font-family:'high_jakartaregular';
+  font-size: 18px;
+  font-weight:normal;
+  font-style:normal;
+}
+
+
+.sidenav {
+  height: 100%; 
+  width: 170px;
+  /*position: sticky; */
+  position:fixed;
+  z-index: 4; 
+  top: 0; 
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden; 
+  padding-top: 0;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  margin-top: 15%;
+  padding: 6px 6px 4px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  /*font-family: courier;*/
+  font-family:'high_jakartaregular';
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav ul {
+/*color:#b07662;*/
+color:#b08d57;
+font-family:courier;
+font-size:13px;
+/*margin-top:0*/
+}
+
+.sidenav li:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 170px; 
+  /* Same as the width of the sidebar */
+  /*width:calc(100% - 160px);*/
+  z-index:5;
+  padding: 0px 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#scrolly-bottom .main.scrolly {
+  /*display: flex;*/
+  /*padding-left: 50px;*/
+  /*max-width: 100rem;*/
+  width: 100%;
+  /*width:calc(100%-160px);*/
+  margin: 3rem auto;
+  /*background-color: #f4f4f4;*/
+  padding: 1rem;
+}
+
+#scrolly-bottom .scrolly > * {
+  flex: 1;
+}
+#scrolly-bottom .scrolly article {
+  padding-right: 1rem;
+  max-width: 40rem;
+  /*max-width: 100rem;*/
+}
+#scrolly-bottom .scrolly article .step {
+  /*padding-left: 50px;*/
+  min-height: 100vh;
+  font-size: 18px;
+  /*margin-bottom: 2rem;*/
+  background-color: #5b5b5b;
+  transition: background-color 250ms ease-in-out;
+}
+#scrolly-bottom .scrolly article .step p {
+padding-left: 20%;
+padding-right:20%;
+text-align: justify;
+text-justify: inter-word;
+}
+
+#scrolly-bottom .scrolly article .step h4 {
+    font-family:'high_jakartaregular';
+    font-size: 28px;
+    text-align: center;
+    margin:auto;
+    color:#d6342b;
+    padding-top: 15px;
+    padding-bottom:30px;
+}
+
+#scrolly-bottom .scrolly article .step:last-of-type {
+  margin-bottom: 0;
+}
+
+#scrolly-bottom .scrolly article .step.is-active {
+  /*background-color: #eed6bc;*/
+  background-color: #d8b99a;
+  color:black;
+}
+
+#scrolly-bottom .scrolly article.step.is-active h4{
+  color: #d6342b;
+  /*color:white;*/
+}
+  
+  
+/*#scrolly-bottom .scrolly article.step h4 {*/
+/*  margin: 0;*/
+/*  padding: 5rem;*/
+/*  text-align: center;*/
+  /*position:relative;*/
+  /*font-family: "medio_vintage_roughregular";*/
+  /*font-weight: 100;*/
+/*  color: #e8e2db;*/
+/*}*/
+
+#scrolly-bottom .scrolly figure.sticky {
+  /*position: sticky;*/
+  position:fixed;
+  width: 88%;
+  /*height: 50vh;*/
+  height:13.5vh;
+  /*background: #636168;*/
+  background-color:#111;
+  margin: 0;
+  bottom: 0;
+  left: 10;
+}
+/*#scrolly-bottom .scrolly figure.sticky .flex-container {*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 5%;*/
+/*  transform: translateY(-10%);*/
+/*  width: 90%;*/
+/*  height: 30rem;*/
+/*  background-color: #fff;*/
+  /*display: flex;*/
+  /*flex-direction:row;*/
+/*  border-radius: 15px;*/
+/*}*/
+
+#scrolly-bottom .scrolly figure.sticky .flex-container {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-10%);
+  z-index: 25;
+  width: 95%;
+  height: 2.5rem;
+  background-color: #ebe8ea;
+  border-radius: 15px;
+}
+
+#scrolly-bottom .scrolly figure.sticky .flex-container.bar-wins {
+  /*margin:auto;*/
+  width: 10%;
+  height: 100%;
+  border-radius: 15px;
+  transition: width 1s ease-in-out;
+  /*background-color: #d6342b;*/
+}
+
+#scrolly-bottom .scrolly figure.sticky.flex-container.bar-losses {
+  /*margin:auto;*/
+  width: 10%;
+  height: 100%;
+  border-radius: 15px;
+  transition: width 1s ease-in-out;
+  /*background-color: #daa520;*/
+  background-color:blue;
+}
+
+#scrolly-bottom .scrolly figure.sticky p {
+  text-align: center;
+  margin: 2;
+  /*padding: 2px;*/
+  font-family: 'medio_vintage_roughregular';
+  /*font-weight: 400;*/
+  font-size: 18px;
+  color: #22201b;
+}
+
+.fullscreen-image {	
+	position: relative;
+	z-index: 6;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*margin-top: 400px;;*/
+}
+
+.fullscreen-image img {
+	/*position: absolute;*/
+	/*min-width: 400px;*/
+	height:auto;
+	margin-left:-170px;
+	/*width:100%;*/
+	width: 100vw; 
+	/*left: -50px;*/
+	/*margin-top: 500px;*/
+	/*margin-bottom:500px;*/
+	z-index: 8;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fullscreen-image h1 {
+	position: absolute;
+	right: 0;
+	color: #fff;
+}
+
+/*.bottom-left-title {*/
+  /*margin: 20px;*/
+/*  z-index:9;*/
+/*}*/
+
+.bottom-left-title h1 {
+  position: absolute;
+  bottom: 8px;
+  z-index:9;
+  left: 16px;
+  font-size:90px;
+  /*font-family:'komika_axisregular';*/
+  font-family: 'high_jakartaregular';
+  color:#d6342b;
+}
+
+.js-floating-text span {
+  position:fixed;
+  z-index:20;
+  font-size: 18px;
+  border-radius: 15px;
+  color: white;
+  background: #000102;
+  text-align: center;
+  font-family:'courier';
+  font-weight:normal;
+  font-style:normal;
+  bottom: 500px;
+  width:400px;
+  right: 20px;
+  padding: 10px 15px;
+}
+
+.js-floating-score span {
+  position:fixed;
+  z-index:20;
+  font-size: 20px;
+  border-radius: 15px;
+  /*color:#d6342b;*/
+  color: #C6962F;
+  background: #111;
+  text-align: center;
+  /*font-family:'komika_axisregular';*/
+  font-family:'boxingregular';
+  font-weight:normal;
+  font-style:normal;
+  bottom: 46px;
+  width:600px;
+  left: 700px;
+  padding: 10px 15px;
+}
+
+#tooltip {
+   pointer-events: none;
+   font-size: 12px;
+   z-index: 25;
+   padding: 4px;
+   /*border: 1px solid #CCC;*/
+   border-radius: 3px;
+}
+
+.suspension{
+  color:red;
+}
+
