@@ -1,330 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 @font-face {
-    font-family: 'high_jakartaregular';
-    src: url('highjakarta-webfont.woff2') format('woff2'),
-         url('highjakarta-webfont.woff') format('woff');
+    font-family: 'solanderregular';
+    src: url('solander-webfont.woff2') format('woff2'),
+         url('solander-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'boxingregular';
-    src: url('boxing-webfont.woff2') format('woff2'),
-         url('boxing-webfont.woff') format('woff');
+    font-family: 'zanzabarregular';
+    src: url('zanzabar_d-webfont.woff2') format('woff2'),
+         url('zanzabar_d-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'medio_vintage_roughregular';
-    src: url('medio_vintage_rough-webfont.woff2') format('woff2'),
-         url('medio_vintage_rough-webfont.woff') format('woff');
+    font-family: 'arabdancesregular';
+    src: url('arabdances-webfont.woff2') format('woff2'),
+         url('arabdances-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-.container-2 {
-  /*width: 24px;*/
-  height: 24px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*background-color:#E0A81F;*/
 }
 
-.intro{
-  text-align: center;
-  margin:auto;
+/*@media (max-width:750 px){*/
+
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: #2B3272;
+  /*background:#D6AD60;*/
+  background: linear-gradient(to bottom right, #D6AD60, #F4EBD0, #122620);
 }
-.hero1 {
-  padding-top: 2vh;
-  background-image: url("https://ids.si.edu/ids/deliveryService?max=800&id=NMAAHC-2016_164_22_2_001");
-  background-repeat: no-repeat;
+    
+.parallax {
+  /* The image used */
+background-image: url("https://images.unsplash.com/photo-1544497309-d05cff20121a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  /*background-image: url("https://cdn.britannica.com/89/94689-050-4C424297/shahadah-call-lines-prayer-Islamic-mosque-calligraphy.jpg");*/
+  /*-webkit-filter: grayscale(100%);*/
+  /*filter: grayscale(100%);*/
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
-  color: #C6962F;
-  min-height: 800px; 
-  /*font-size:52px;*/
-  /*line-height:30px;*/
-  height: 100vh;
-  position:relative;
-  z-index: 10;
-  /*height: 100%;*/
-}
-
-.intro h2 {
-  font-family:'high_jakartaregular';
-  margin: auto;
-  padding: 100px 0 100px;
-  font-size:90px;
-  font-weight:bold;
-/*  text-shadow:*/
-/*    0 0 7px #fff,*/
-/*    0 0 10px #fff,*/
-/*    0 0 21px #fff,*/
-/*    0 0 42px #f2cf03,*/
-/*    0 0 82px #f2cf03,*/
-/*    0 0 92px #f2cf03,*/
-/*    0 0 102px #f2cf03,*/
-/*    0 0 151px #f2cf03;*/
-}
-
-.intro  p {
-  font-family: 'boxingregular';
-  margin: auto;
-  color:#C64B2F;
-  font-size:36px;
-}
-.chevron {
-  /*position: absolute;*/
-  margin: auto;
-  align-items: center;
-  width: 28px;
-  height: 12px;
-  opacity: 0;
-  transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out infinite;
-}
-
-.chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: grey;
-}
-
-.chevron:before {
-  left: 0;
-  transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
-}
-
-@keyframes move {
-  25% {
-    opacity: 1;
-
-  }
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
-}
-
-.text {
-  display: block;
-  margin-top: 15px;
-  text-align: center;
-  /*margin-right: -30px;*/
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  font-size: 16px;
-  color: grey;
-  text-transform: uppercase;
-  /*white-space: nowrap;*/
-  opacity: .25;
-  animation: pulse 2s linear alternate infinite;
-}
-
-@keyframes pulse {
-  to {
-    opacity: 1;
-  }
-}
-
-.filler p{
-  height: 5rem;
-  text-align: center;
-  font-family:'high_jakartaregular';
-  font-weight:normal;
-  font-style:normal;
-}
-
-.sidenav {
-  height: 100%; 
-  width: 160px; 
-  position: fixed; 
-  z-index: 1; 
-  top: 0; 
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden; 
-  padding-top: 10px;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  margin-top: 15%;
-  padding: 6px 8px 4px 12px;
-  text-decoration: none;
-  font-size: 16px;
-  /*font-family: courier;*/
-  font-family:'high_jakartaregular';
-  color: #818181;
-  display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav ul {
-color:#b07662;
-font-size:13px;
-}
-
-.sidenav li:hover {
-  color: #d6342b;
-}
-
-/* Style page content */
-.main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-#scrolly-bottom .scrolly {
-  display: flex;
-  /*max-width: 100rem;*/
-  max-width: 60rem;
-  margin: 3rem auto;
-  background-color: #f4f4f4;
-  padding: 1rem;
-}
-#scrolly-bottom .scrolly > * {
-  flex: 1;
-}
-#scrolly-bottom .scrolly article {
-  padding-right: 1rem;
-  max-width: 30rem;
-  /*max-width: 100rem;*/
-}
-#scrolly-bottom .scrolly article .step {
-  min-height: 100vh;
-  /*margin-bottom: 2rem;*/
-  background-color: #5b5b5b;
-  transition: background-color 250ms ease-in-out;
-}
-/*#scrolly-bottom .scrolly article .step:last-of-type {*/
-  /*margin-bottom: 0;*/
-/*}*/
-#scrolly-bottom .scrolly article .step.is-active {
-  /*background-color: #eed6bc;*/
-  background-color: #d8b99a
-}
-
-#scrolly-bottom .scrolly article .step.is-active p{
-  color: #d6342b;}
-  
-#scrolly-bottom .scrolly article .step p {
-  margin: 0;
-  padding: 5rem;
-  text-align: center;
-  font-family: "medio_vintage_roughregular";
-  /*font-weight: 100;*/
-  color: #e8e2db;
-}
-#scrolly-bottom .scrolly figure.sticky {
-  /*position: sticky;*/
-  position:fixed;
-  width: 90%;
-  /*height: 50vh;*/
-  height:14vh;
-  background: #ecce1d;
-  margin: 0;
-  bottom: 0;
-  /*left: 0;*/
-  left: 10;
-}
-#scrolly-bottom .scrolly figure.sticky .flex-container {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-10%);
-  width: 90%;
-  height: 2rem;
-  background-color: #fff;
-  display: flex;
-  flex-direction:row;
-  border-radius: 15px;
-}
-
-#scrolly-bottom .scrolly figure.sticky .bar-wins {
-  width: 10%;
-  height: 100%;
-  border-radius: 15px;
-  transition: width 1s ease-in-out;
-  background-color: #d6342b;
-}
-
-#scrolly-bottom .scrolly figure.sticky .bar-losses {
-  width: 10%;
-  height: 100%;
-  border-radius: 15px;
-  transition: width 1s ease-in-out;
-  /*background-color: #daa520;*/
-  background-color:blue;
-}
-
-#scrolly-bottom .scrolly figure.sticky p {
-  text-align: center;
-  margin: 2;
-  /*padding: 2px;*/
-  font-family: 'medio_vintage_roughregular';
-  /*font-weight: 400;*/
-  font-size: 18px;
-  color: #22201b;
-}
-
-
-.fullscreen-image {	
-	position: relative;
-  /*margin-top: 400px;;*/
-}
-
-.fullscreen-image img {
-	position: absolute;
-	min-width: 400px;
-	/*height:100%;*/
-	/*width:100%;*/
-	width: 105vw; 
-	left: -200px;
-	margin-top: 500px;
-	margin-bottom:500px;
-	z-index: 5;
-	background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.fullscreen-image h1 {
-	position: absolute;
-	right: 0;
-	color: #fff;
+
+  #title {
+    padding-top: 300px;
+    /*top: 200px;*/
+    /*color:yellow;*/
+    color:#F4EBD0;
+    font-size:90px;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family:arabdancesregular;
+    text-align: center;
+  }
+  
+  h2{
+    padding-top:20px;
+    padding-bottom:50px;
+    font-size:36px;
+    font-style: oblique;
+    color:black;
+    text-align:center;
+  }
+  
+  p {
+    padding-top: 20px;
+    padding-bottom:20px;
+    margin-left: 300px;
+    margin-right:300px;
+    font-size: 20px;
+    font-family: "arial";
+    margin-bottom: 20px;
+  }
+  
+.legendTitle {
+  font-weight: 700;
 }
+
+.legendCells {
+  transform: translateY(5px);
+}
+
+.legendCells .label {
+  fill: #6C698A;
+}
+  
+  
+#asterisk {
+  /*text-transform: lowercase;*/
+  writing-mode: vertical-lr;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+}
+
